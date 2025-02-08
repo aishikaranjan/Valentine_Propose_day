@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="C:\Users\aishi\Downloads\HEHE\HEHE\BOOM.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <h1>Yay! I knew PUKKU LOVES ME! ❤️</h1>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif" alt="Happy GIF">
+        <p>WUVV YOUUU!</p>
+
+        
+        <div class="message-container">
+            <p>Click and turn me ON 👅 RAWRRRR </p>
+        </div>
+
+        <!-- Music Button placed below the 'You're the best!' line -->
+        <button class="play-button" onclick="playMusic()">Play Music</button>
+
+    </div>
+
+    <script>
+        function playMusic() {
+            let audio = document.getElementById("bgMusic");
+            let playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay blocked. Please click the play button to play music.");
+                });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // We no longer need the sessionStorage autoplay check, since we want the user to click
+        });
+    </script>
+</body>
+</html>
